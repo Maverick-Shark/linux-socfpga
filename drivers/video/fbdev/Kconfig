@@ -1798,6 +1798,15 @@ config FB_HYPERV
 	help
 	  This framebuffer driver supports Microsoft Hyper-V Synthetic Video.
 
+config FB_MISTER
+	tristate "MiSTer Frame Reader framebuffer support"
+	depends on FB
+	select FB_SYS_FILLRECT
+	select FB_SYS_COPYAREA
+	select FB_SYS_IMAGEBLIT
+	help
+	  This driver supports the MiSTer Frame Reader.
+
 config FB_SIMPLE
 	tristate "Simple framebuffer support"
 	depends on FB
