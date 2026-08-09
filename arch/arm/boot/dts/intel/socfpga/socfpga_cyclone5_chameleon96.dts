@@ -21,7 +21,7 @@
 	memory@0 {
 		name = "memory";
 		device_type = "memory";
-		reg = <0x0 0x20000000>; /* 512MB; top 48MB (0x1D000000-0x1FFFFFFF) reserved for MiSTer FB + fpga_mem */
+		reg = <0x0 0x20000000>; /* 512MB; top 64MB (0x1C000000-0x1FFFFFFF) reserved for MiSTer FB + core FB + fpga_mem */
 	};
 
 	reserved-memory {
@@ -29,8 +29,8 @@
 		#size-cells = <1>;
 		ranges;
 
-		mister_fb_reserved@1d000000 {
-			reg = <0x1D000000 0x3000000>;
+		mister_fb_reserved@1c000000 {
+			reg = <0x1C000000 0x4000000>;
 			no-map;
 		};
 	};
